@@ -1,0 +1,50 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>transform 测试</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<style type="text/css">
+.content{width:200px;height:200px;border:2px solid #cc0000;position:Absolute}
+.go{animation:move ease-in-out .2s infinite;}
+@keyframes move{
+   0%{
+     opacity:1;
+   }
+   50%{
+     opacity:.2;
+	 border:2px solid blue;
+	 transform:scale(.5,.5) translate(200%,200%);
+   }
+   100%{
+     opacity:1;
+   }   
+}
+</style>
+<body >
+	<div class="content"></div>
+	<div class="content "></div>
+	<div class="content "></div>
+	<div class="content "></div>	
+</body>
+
+<script type="text/javascript">
+   var content = document.querySelectorAll('.content');
+   var i = 0;
+   var t = setInterval(function(){
+       content[i].setAttribute('class','content go');
+
+	   i++;
+	   console.log('添加第'+i+'个class成功！'); 	   
+	   if(i==content.length){
+	    console.log('class添加完毕！');
+		clearInterval(t);
+	   }
+   },700)
+
+</script>
+</html>
