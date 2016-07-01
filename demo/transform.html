@@ -16,8 +16,9 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
 .flex-item{flex:1;width:0%;text-align:center;color:#fff}
 .con{border:1px solid #ddd;padding:20px;}
 .i01{width:100px;height:100px;background:#cc0000;}
-.go{animation:move ease-in 6s infinite;}
-@keyframes rotate_{
+
+.RotateAndScale{animation:RotateAndScale ease-in 6s 2s infinite;}
+@keyframes RotateAndScale{
    0%{
      opacity:1; 
    }
@@ -26,7 +27,7 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
    }   
    90%{
      opacity:.2;
-	 transform:scale(.5,.5) rotate(720deg);
+	 transform:scale(.5,.5) rotate(720deg) skew(35deg);
    }
    100%{
      opacity:1;
@@ -36,14 +37,14 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
 <body >
 <h3>animation</h3>
 <div class="con">
-	<div class="i01 go flex-con"><p class='flex-item'>旋转缩放</p></div>
+	<div class="i01 RotateAndScale flex-con"><p class='flex-item'>旋转缩放</p></div>
 </div>
 
 
 
 <h3>animation</h3>
 <div class="con">
-	<div class="i01 go flex-con"><p class='flex-item'>旋转缩放</p></div>
+	<div class="i01 RotateAndScale flex-con"><p class='flex-item'>旋转缩放</p></div>
 	<p>
 	ddd
 	</p>
