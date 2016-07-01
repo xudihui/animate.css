@@ -16,8 +16,9 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
 .flex-item{flex:1;width:0%;text-align:center;color:#fff}
 .con{border:1px solid #ddd;padding:20px;}
 .i01{width:100px;height:100px;background:#cc0000;}
-
+.i02{width:80px;height:80px;background:#cc0000;color:#fff;line-height:80px;text-align:center;font-size:12px}
 .RotateAndScale{animation:RotateAndScale ease-in 6s 2s infinite;}
+
 @keyframes RotateAndScale{
    0%{
      opacity:1; 
@@ -33,11 +34,35 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
      opacity:1;
    }   
 }
+
+
+.trans_list{margin-bottom:10px;}
+.ease {
+    transition: all 4s ease;    /*越来越慢*/
+}
+.ease-in {
+    transition: all 4s ease-in;/*先慢*/
+}
+.ease-out {
+    transition: all 4s ease-out;/*后慢*/
+}
+.ease-in-out {
+    transition: all 4s ease-in-out;/*先慢后慢*/
+}
+.con:hover .trans_list{
+   transform:rotate(360deg);
+   margin-left:80%;
+}
+
+
 </style>
 <body >
-<h3>animation</h3>
+<h3>transition</h3>
 <div class="con">
-	<div class="i01 RotateAndScale flex-con"><p class='flex-item'>旋转缩放</p></div>
+	<div class="i02 trans_list ease">ease</div>
+	<div class="i02 trans_list ease-in">ease-in</div>
+	<div class="i02 trans_list ease-out">ease-out</div>
+	<div class="i02 trans_list ease-in-out">ease-in-out</div>	
 </div>
 
 
