@@ -17,6 +17,7 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
 .con{border:1px solid #ddd;padding:20px;}
 .i01{width:100px;height:100px;background:#cc0000;}
 .i02{width:80px;height:80px;background:#cc0000;color:#fff;line-height:80px;text-align:center;font-size:12px}
+.i03{width:80px;height:80px;background:#fff;border:1px dashed #ccc;color:#000;line-height:80px;text-align:center;font-size:12px}
 .RotateAndScale{animation:RotateAndScale ease-in 6s 2s infinite;}
 
 @keyframes RotateAndScale{
@@ -55,8 +56,17 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
 }
 
 
+.trans_list{margin-bottom:10px;}
+
+
 </style>
 <body >
+
+<h3>transform</h3>
+<div class="con">
+	<div class="i03">本体</div>
+</div>
+
 <h3>transition</h3>
 <div class="con">
 	<div class="i02 trans_list ease">ease</div>
@@ -70,9 +80,6 @@ h3{padding:5px;background:#f1f1f1;color:#333;font-weight:normal;border:1px solid
 <h3>animation</h3>
 <div class="con">
 	<div class="i01 RotateAndScale flex-con"><p class='flex-item'>旋转缩放</p></div>
-	<p>
-	ddd
-	</p>
 </div>
 
 
